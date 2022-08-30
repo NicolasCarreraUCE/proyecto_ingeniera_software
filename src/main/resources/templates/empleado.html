@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand navbar-dark bg-dark" th:object="${usuario}">
+        <div class="container">
+            <a class="navbar-brand" href="#">Cine +</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample02"
+                aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    
+                </li>
+            </ul>
+
+
+            <div class="text-white" th:text="*{rol}"></div>
+            <div class="text-white"> : </div>
+            <div class="text-white" th:text="*{username}"></div>
+        </div>
+    </nav>
+    <img th:src="@{/Baner_Cine.jpg}" class="img-fluid" alt="Responsive image">
+    <div class="container mt-4">
+        <div class="col-sm-6">
+            <form>
+                <div class="card">
+                    <div class="card-header">
+                        <h1>Venta</h1>
+                    </div>
+                    <div class="card-body">
+             
+                        <div class="form-group">
+                            <label for="">Titulo de la pelicula</label>
+                            <input type="text" class="form-control">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="">Funcion</label>
+                            <input type="text" class="form-control">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="">Numero de entradas</label>
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <button type="submit" class="btn btn-outline-success">Generar</button>
+                    </div>
+                </div>
+            </form>
+            <table class="table mt-5">
+                <thead>
+                    <tr>
+                        <th>Cantidad</th>
+                        <th>Descripcion</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Star wars los ultimos jedi</td>
+                        <td scope="row">$5</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+            <button type="submit" class="btn btn-outline-success">Guardar</button>
+        </div>
+
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
